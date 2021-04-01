@@ -8,7 +8,6 @@ import time
 
 def dos(ip,port,choice):
 
-    choice = '1'
     times = 100000000
     threads = 5
     def run():
