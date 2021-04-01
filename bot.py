@@ -25,5 +25,7 @@ async def echo_message(msg: types.Message):
         await bot.send_message(msg.from_user.id, dos(s[0],s[1],'3'))
     elif s[0] == 'stop':
         await bot.send_message(msg.from_user.id, stop())
+    elif msg.text == 'stop':
+         await bot.send_message(msg.from_user.id, stop()) 
 if __name__ == '__main__':
     executor.start_polling(dp)
