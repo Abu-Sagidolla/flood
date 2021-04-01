@@ -8,7 +8,7 @@ import time
 
 
 ip = '82.200.161.178'
-port = 123
+port = 80
 choice = '1'
 times = 100000000
 threads = 5
