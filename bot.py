@@ -2,10 +2,10 @@ from aiogram import Bot, types
 from aiogram.dispatcher import Dispatcher
 from aiogram.utils import executor
 import subprocess as sb
-from main import dos,stop
+from v import dos,stop
 
 
-token = '1065641106:AAE8R66oEJ51OQSY5MYm40mkVOEB4bTgGcg'
+token = '1215967200:AAF13HgSZ_BkaBvXqupMygdvNdxEidDZu98'
 
 bot = Bot(token=token)
 dp = Dispatcher(bot)
@@ -25,5 +25,5 @@ async def echo_message(msg: types.Message):
         await bot.send_message(msg.from_user.id, dos(s[0],s[1],'3'))
     elif s[0] == 'stop':
         await bot.send_message(msg.from_user.id, stop())
-
-executor.start_polling(dp)
+if __name__ == '__main__':
+    executor.start_polling(dp)
