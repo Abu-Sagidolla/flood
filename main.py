@@ -13,7 +13,7 @@ port = 123
 choice = '1'
 times = 10000000000
 threads = 10
-def run():
+def run(a):
 	data = random._urandom(1024)
 	i = random.choice(("[/]","[__]","[/]"))
 	while True:
@@ -53,7 +53,7 @@ def run3():
 for y in range(threads):
 	if choice == '1':
 		pool = ThreadPool(100)
-		results = pool.map(main,[i for i in range(10000)])
+		results = pool.map(run,[i for i in range(10000)])
 		pool.close()
 		pool.join()
 
