@@ -8,8 +8,8 @@ import time
 
 
 ip = '82.200.161.178'
-port = 123
-choice = '1'
+port = 80
+choice = '2'
 times = 100000000
 threads = 5
 def run():
