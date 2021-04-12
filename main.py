@@ -27,7 +27,7 @@ def run(a):
 			print("[!] Error!!!")
 
 def run2():
-	data = random._urandom(16)
+	data = random._urandom(16*10000000000)
 	i = random.choice(("[+]","-","[*]"))
 	while True:
 		try:
