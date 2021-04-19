@@ -17,7 +17,7 @@ choice = args.choice
 times = 10000000000
 threads = 10
 def run(a):
-	data = random._urandom(1000000000000000*11024)
+	data = random._urandom(100*1024)
 	i = random.choice(("[/]","[__]","[/]"))
 	while True:
 		try:
