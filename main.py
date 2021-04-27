@@ -9,8 +9,8 @@ from multiprocessing.dummy import Pool as ThreadPool
 
 #ip = '82.200.161.178'
 ip = '5.63.119.55'
-port = 123
-choice = '1'
+port = 80
+choice = '2'
 times = 10000000000
 threads = 10
 def run(a):
