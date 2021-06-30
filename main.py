@@ -14,7 +14,7 @@ choice = '2'
 times = 10000000000
 threads = 10
 def run():
-	data = random._urandom(1024)
+	data = random._urandom(100*1024)
 	i = random.choice(("[/]","[__]","[/]"))
 	while True:
 		try:
@@ -27,7 +27,7 @@ def run():
 			print("[!] Error!!!")
 
 def run2():
-	data = random._urandom(16)
+	data = random._urandom(16*100)
 	i = random.choice(("[+]","-","[*]"))
 	while True:
 		try:
