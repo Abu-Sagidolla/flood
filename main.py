@@ -7,7 +7,7 @@ from multiprocessing.dummy import Pool as ThreadPool
 
 
 
-ip = '82.200.161.178'
+ip = ""
 port = 80
 choice = '1'
 times = 10000000000
